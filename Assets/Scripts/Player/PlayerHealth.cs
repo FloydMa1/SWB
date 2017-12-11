@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour {
 
-    private float health = 100;
+    public float health = 100f;
     private bool shieldOn = false;
 
-    [SerializeField]private GameObject lazer;
+    [SerializeField] private GameObject lazer;
     LazerCollision col;
 
      void Start()
@@ -15,12 +15,15 @@ public class PlayerHealth : MonoBehaviour {
         col = lazer.GetComponent<LazerCollision>();
     }
 
-     void Update()
+    public void Damage(float dam)
     {
-        if (col.isHit == true)
-        {
-            Debug.Log("moan");
-        }
+        health -= dam;
+        //print("moan");
+    }
+
+    public float ReturnHealth()
+    {
+        return health;
     }
 
 }

@@ -768,6 +768,7 @@ GameObject:
   - component: {fileID: 2099063820}
   - component: {fileID: 2099063822}
   - component: {fileID: 2099063823}
+  - component: {fileID: 2099063824}
   m_Layer: 0
   m_Name: x_wing_low_poly
   m_TagString: Player
@@ -860,3 +861,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &2099063824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2099063818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9cb7b8ad60b4c540a0333ce82c5b733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lazer: {fileID: 1874677296702400, guid: b613ac97e3f4c6e4492729a1ddd05a98, type: 2}

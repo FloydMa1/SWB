@@ -13,8 +13,8 @@ public class LazerCollision : MonoBehaviour {
         {
             var a = Instantiate(particleHit, transform.position, Quaternion.identity);
             Destroy(a, 1.5f);
-            isHit = true;
-            Debug.Log(isHit);
+            collision.gameObject.GetComponent<PlayerHealth>().Damage(20000);
+            //Debug.Log(isHit);
         }
     }
 

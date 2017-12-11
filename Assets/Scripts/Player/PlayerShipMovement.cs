@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerShipMovement : MonoBehaviour {
 
-    [Range(10f,30f)]
-    [SerializeField] float movementSpeed;
+    [Range(10f,60f)]
+    public float movementSpeed;
     [SerializeField] float turnSpeed;
     [SerializeField] float maxSpeed;
     [SerializeField] float minSpeed;
@@ -48,5 +48,9 @@ public class PlayerShipMovement : MonoBehaviour {
     void Thrust()
     {
          myT.position += myT.forward * movementSpeed * Time.deltaTime;
+    }
+    public float ReturnSpeed()
+    {
+        return movementSpeed;
     }
 }
