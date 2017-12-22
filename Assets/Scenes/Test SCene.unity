@@ -872,4 +872,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9cb7b8ad60b4c540a0333ce82c5b733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lazer: {fileID: 1874677296702400, guid: b613ac97e3f4c6e4492729a1ddd05a98, type: 2}
+  health: 100
+  lazer: {fileID: 1605708960014836, guid: 16f465a505c56a1418b5e75fb50ff50b, type: 2}

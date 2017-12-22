@@ -9,19 +9,25 @@ public class PlayerShipMovement : MonoBehaviour {
     [SerializeField] float turnSpeed;
     [SerializeField] float maxSpeed;
     [SerializeField] float minSpeed;
+    [SerializeField] private AudioClip flightSound;
 
     Transform myT;
 
 	// Use this for initialization
 	void Start () {
         myT = transform;
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
         ChangeMovementSpeed();
         Turn();
         Thrust();
+        if(GameObject.Find("Canvas").GetComponent<ButtonController>().startGame == true)
+        {
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.PlayOneShot(flightSound, 0.1f);
+        }
     }
 
     void ChangeMovementSpeed()

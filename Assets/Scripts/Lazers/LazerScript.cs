@@ -9,10 +9,15 @@ public class LazerScript : MonoBehaviour {
     private float timeBetweenLazers = 1.2f;
     public GameObject lazer;
 
-	void Update () {
+    private void Awake()
+    {
+
+    }
+
+    void Update () {
         timer += Time.deltaTime;
 
-        if (/*Input.GetMouseButton(0) &&*/ timer >= timeBetweenLazers)
+        if (timer >= timeBetweenLazers)
         {
             Shoot();
         }
@@ -22,10 +27,9 @@ public class LazerScript : MonoBehaviour {
     }
 
     private void Shoot()
-    {
+    {  
         timer = 0f;
-
-            Instantiate(lazer, transform.position, Quaternion.identity);
+        Instantiate(lazer, transform.position, Quaternion.identity);
     }
 
 }

@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class SpeedBar : MonoBehaviour {
 
-    GameObject player;
+    public GameObject player;
     float barSpeed;
     public Image bar;
 
 	// Use this for initialization
 	void Start () {
-        player = GameObject.FindWithTag("Player");
+        //player = GameObject.FindWithTag("Player");
 	}
 	
 	// Update is called once per frame

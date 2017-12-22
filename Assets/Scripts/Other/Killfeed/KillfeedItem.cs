@@ -39,47 +39,33 @@ public class KillfeedItem : MonoBehaviour {
 
     public void RandomName()
     {
-        RandomColor();
-
         randomName = Random.Range(1, 7);
 
         switch (randomName)
         {
             case 1:
                 names = "Joey";
-                break;
-            case 2:
-                names = "Koen";
-                break;
-            case 3:
-                names = "Sebas";
-                break;
-            case 4:
-                names = "Tim";
-                break;
-            case 5:
-                names = "Floyd";
-                break;
-            case 6:
-                names = "Myrte";
-                break;
-        }
-    }
-
-    public void RandomColor()
-    {
-        randomColor = Random.Range(1, 4);
-
-        switch (randomColor)
-        {
-            case 1:
                 color = "blue";
                 break;
             case 2:
-                color = "red";
+                names = "Koen";
+                color = "blue";
                 break;
             case 3:
-                color = "yellow";
+                names = "Sebas";
+                color = "red";
+                break;
+            case 4:
+                names = "Tim";
+                color = "red";
+                break;
+            case 5:
+                names = "Floyd";
+                color = "blue";
+                break;
+            case 6:
+                names = "Myrte";
+                color = "red";
                 break;
         }
     }
@@ -88,12 +74,10 @@ public class KillfeedItem : MonoBehaviour {
     {
         RandomName();
         nameKiller = names;
-        RandomColor();
         killerColor = color;
 
         RandomName();
         nameKilled = names;
-        RandomColor();
         killedColor = color;
 
         if (nameKilled == nameKiller && killedColor != killerColor)

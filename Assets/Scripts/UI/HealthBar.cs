@@ -5,20 +5,20 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour {
 
-    GameObject lazer;
+    public GameObject player;
     float barSpeed;
     public Image bar;
 
     // Use this for initialization
     void Start()
     {
-        lazer = GameObject.FindWithTag("Lazer");
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        barSpeed = lazer.GetComponent<PlayerHealth>().ReturnHealth();
+        barSpeed = player.GetComponent<PlayerHealth>().ReturnHealth();
         bar.fillAmount = barSpeed / 100;
     }
 }

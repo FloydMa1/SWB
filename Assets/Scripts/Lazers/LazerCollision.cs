@@ -13,8 +13,9 @@ public class LazerCollision : MonoBehaviour {
         {
             var a = Instantiate(particleHit, transform.position, Quaternion.identity);
             Destroy(a, 1.5f);
-            collision.gameObject.GetComponent<PlayerHealth>().Damage(20000);
-            //Debug.Log(isHit);
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.Play();
+            collision.gameObject.GetComponent<PlayerHealth>().Damage(5);
         }
     }
 
